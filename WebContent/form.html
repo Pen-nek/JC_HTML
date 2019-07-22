@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!--메뉴판 시작-->
+	<img id="top_menu" src = "img/menu.png" alt = "메뉴판" usemap="#favorites">
+	<map name = "favorites">
+		<area shape = "rect" coords="32,10,128,53" href="index.html" alt="홈" target="_self">
+		<area shape = "rect" coords="177,10,274,53" href="profile.html" alt="프로필" target="_self">
+		<area shape = "rect" coords="324,10,449,53" href="example.html" alt="Day02" target="_self">
+		<area shape = "rect" coords="490,10,582,53" href="form.html" alt="Form 태그" target="_self">
+	</map>
+	<!--메뉴판 끝-->
+
+	<h2>로그인</h2>
+
+	<form>
+		<fieldset>
+			<table>
+				<tr>
+					<td align = "right">
+						<label for="signin_userid">아이디</label>
+					</td>
+					<td>
+						<input type="text" id="signin_userid" name="signin_userid" placeholder="아이디" autofocus>
+					</td>
+				</tr>
+				<tr>
+					<td align = "right">
+						<label for="signin_userpw">비밀번호</label>
+					</td>
+					<td>
+						<input type="password" id="signin_userpw" name="signin_userpw" placeholder="비밀번호">
+					</td>
+				</tr>
+			</table>
+
+            <br>
+
+            <input type="submit" value="로그인">
+		</fieldset>
+
+	</form>
+
+    <br><br><br><br>
+
+
+
+	<h2>회원가입</h2>
+
+	<form>
+		<fieldset>
+			<legend>아이디/비밀번호</legend>
+			<table>
+				<tr>
+					<td align="right">
+						<label for="signup_userid">아이디</label>
+					</td>
+					<td>
+						<input type="text" id="signup_userid" size=15 placeholder="아이디">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="signup_userpw">비밀번호</label>
+					</td>
+					<td>
+						<input type="password" id="signup_userpw" size=15 placeholder="비밀번호">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="checkpw">비밀번호 확인</label>
+					</td>
+					<td>
+						<input type="password" id="checkpw" size=15 placeholder="비밀번호 확인">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<br>
+
+		<fieldset>
+			<legend>개인정보</legend>
+			<table>
+				<tr>
+					<td align="right">
+						<label for = "name">이름</label>
+					</td>
+					<td>
+						<input type="text" id="name" size=15 placeholder="이름">
+					</td>
+				</tr>
+
+				<tr>
+					<td align="right">
+						<label for = "email">메일 주소</label>
+					</td>
+					<td>
+						<input type="email" id="email" size=15 placeholder="메일 주소">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for = "phone">연락처</label>
+					</td>
+					<td>
+						<input type="tel" id="phone" size=15 placeholder="연락처">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for = "homep">개인사이트</label>
+					</td>
+					<td>
+						<input type="url" id="homep" size=15 placeholder="블로그/홈페이지">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<br>
+
+		<input type="submit" id="submit" value="가입하기">
+
+        </form>
+
+		<br><br><br><br>
+
+
+
+		<h2>방명록</h2>
+        <p>
+    		<textarea cols=100 rows=10 name="visiter" placeholder="내용을 남겨주세요."></textarea>
+
+            <br>
+
+            <input type="submit" value="작성하기">
+        </p>
+
+        <br><br><br><br>
