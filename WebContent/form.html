@@ -18,10 +18,9 @@
 	</map>
 	<!--메뉴판 끝-->
 
-	<h2>로그인</h2>
-
 	<form>
 		<fieldset>
+		<legend><h2>로그인</h2></legend>
 			<table>
 				<tr>
 					<td align = "right">
@@ -48,15 +47,13 @@
 
 	</form>
 
-    <br><br><br><br>
+    <br><br><br>
 
 
-
-	<h2>회원가입</h2>
 
 	<form>
 		<fieldset>
-			<legend>아이디/비밀번호</legend>
+			<legend><h2>회원가입</h2></legend>
 			<table>
 				<tr>
 					<td align="right">
@@ -82,14 +79,6 @@
 						<input type="password" id="checkpw" size=15 placeholder="비밀번호 확인">
 					</td>
 				</tr>
-			</table>
-		</fieldset>
-
-		<br>
-
-		<fieldset>
-			<legend>개인정보</legend>
-			<table>
 				<tr>
 					<td align="right">
 						<label for = "name">이름</label>
@@ -124,25 +113,37 @@
 					</td>
 				</tr>
 			</table>
-		</fieldset>
-
-		<br>
-
+			<br>
 		<input type="submit" id="submit" value="가입하기">
-
-        </form>
+		</fieldset>
+		</form>
 
 		<br><br><br><br>
 
 
-
 		<h2>방명록</h2>
-        <p>
+		<form>
+			<table style="margin:0">
+				<tr>
+					<td>
+						<label for="visit_name">이름</label>
+					</td>
+					<td>
+						<input type="text" id="visit_name" size=15 placeholder="아이디">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="visit_pw">비밀번호</label>
+					</td>
+					<td>
+						<input type="password" id="visit_pw" size=15 placeholder="비밀번호">
+					</td>
+				</tr>
+			</table>
     		<textarea cols=100 rows=10 name="visiter" placeholder="내용을 남겨주세요."></textarea>
-
             <br>
-
             <input type="submit" value="작성하기">
-        </p>
+        </form>
 
         <br><br><br><br>
