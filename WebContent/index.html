@@ -2,26 +2,40 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>첫번째 홈페이지</title>
-	<link rel="stylesheet" href="style.css">
+	<title>Home</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body {
+			background: url('img/bg.png'), repeat;
+			background-attachment: fixed;
+		}
+	</style>
 </head>
 <body>
 
+	<!--
 	<img id="top_menu" src = "img/menu.png" alt = "메뉴판" usemap="#favorites">
-
+	
 	<map name = "favorites">
 		<area shape = "rect" coords="32,10,128,53" href="index.html" alt="홈" target="_self">
 		<area shape = "rect" coords="177,10,274,53" href="profile.html" alt="프로필" target="_self">
 		<area shape = "rect" coords="324,10,449,53" href="example.html" alt="Day02" target="_self">
 		<area shape = "rect" coords="490,10,582,53" href="form.html" alt="Form 태그" target="_self">
 	</map>
+	-->
+
+	<div id = "menubox">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="example.html">Example</a></li>
+                <li><a href="form.html">Form</a></li>
+            </ul>
+        </div>
 
 	<h1>Main page</h1>
 	<h4>★&nbsp;&nbsp;홈페이지 접속을 환영합니다!&nbsp;&nbsp;★</h4>
-	<br><br>
-	<hr>
-	<br><br><br><br>
 
-	<img src = "img/mot.jpg" width=500>
+	<img src="img/mot.jpg" width=500px>
 </body>
 </html>
