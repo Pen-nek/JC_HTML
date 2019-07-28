@@ -1,10 +1,27 @@
+/*
+               사용할 색들
+               #E2E9F0 : 연회
+               #4C4A8A : 진파
+               #9F9FBD : 연파
+               #F2CCA7 : 연주
+               #BDA99F : 베이지
+*/
+
+
+/*font-family: 'Noto Serif KR', serif;*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
+/*font-family: 'Lato', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Lato:900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+	color: #404040;
 }
 
 body {
@@ -12,32 +29,71 @@ body {
     background-attachment: fixed;
 }
 
-h1, h2, h3, h4 {
-    margin: 10px 30px 10px 30px;
+p { margin: 20px 0 20px 0;}
+
+h1 { font-size: 25px; }
+
+a { text-decoration: none; }
+a:visited { color: black; }
+a:hover { color: #9F9FBD; }
+a:active { color: white; }
+
+/*플로팅메뉴 만들기 : https://cocosoft.kr/149*/
+#nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    min-width: 638px;
+    height: 30px;
+    padding: 20px 20px 24px 20px;
+    border-bottom: 1px solid #9F9FBD;
+    position: fixed;
+    text-align: center;
+    top: 0px;
+}
+
+#nav a {
+    font-family: 'Lato', sans-serif;
+    color: #4C4A8A;
+}
+
+#nav a:hover {
+    color: #ffffff;
+    text-shadow: -1px 0 #4C4A8A, 0 1px #4C4A8A, 1px 0 #4C4A8A, 0 -1px #4C4A8A;
+}
+
+#nav a:active {
+    color: #F2CCA7;
+}
+
+#nav ul {
+    padding: 0;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 40px;
+}
+
+#full {
+    margin: 200px 300px 300px 300px;
 }
 
 form {
-    margin-left: 30px;
-    width: 400px;
+    margin: 60px 0px 60px 0px;
 }
 
-p, ol, table, li {
-    margin-left: 30px;
+fieldset {
+    padding: 50px;
+    width: 500px;
+    border: 1px solid #9F9FBD;
+}
+
+textarea {
+    width: 500px;
 }
 
 img {
-    margin: 0 auto;
+    max-width: 100%;
 }
 
-#menubox {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 100%;
-    height: 100px;
-    border-bottom: 1px solid #9F9FBD;
-}
-
-#menubox ul li {
-    display: inline;
-    margin: 40px;
-    
-}
+ul { padding: 40px 0 30px 23px; }

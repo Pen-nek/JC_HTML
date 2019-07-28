@@ -9,45 +9,49 @@
 			background: url('img/bg.png'), repeat;
 			background-attachment: fixed;
 		}
+		img {
+			min-width: 150px;
+			margin: 100px 0 120px 0;
+			border: 2px solid #4C4A8A;
+		}
+		h1 { text-align: center; }
+		#pic { text-align: center; }
+		#studying { margin-bottom: 100px; }
+
 	</style>
 </head>
 <body>
-	
-	<div id = "menubox">
+
+	<div id = "nav">
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="profile.html">Profile</a></li>
-			<li><a href="example.html">Example</a></li>
-			<li><a href="form.html">Form</a></li>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="profile.html">PROFILE</a></li>
+			<li><a href="example.html">EXAMPLE</a></li>
+			<li><a href="form.html">FORM</a></li>
 		</ul>
 	</div>
-	
-	<h1>Profile - 이혜민</h1>
-	<p>나무에 앉은 새는 가지가 부러질까 두려워하지 않는다. 새는 나무가 아니라 자신의 날개를 믿기 때문이다.</p>
-	<img src="img/pro.jpg" margin-left="30">
-	
-	<br>
-	<hr>
-	
-	<h4>자주 가는 링크</h4>
-	<ul>
-	  <li><a href="https://www.naver.com/">네이버</a></li>
-	  <li><a href="https://www.daum.net/">다음</a></li>
-	  <li><a href="https://www.google.co.kr/">구글</a></li>
-	</ul>
-	
-	<br>
-	<hr>
-	<table border=1>
-	  <tr>
-	    <th>주소</th>
-	    <td>충북 청주시</td>
-	  </tr>
-	  <tr>
-	    <th>연락처</th>
-	    <td>000-1111-2222</td>
-	  </tr>
-	</table>
 
+	<div id = "full">
+		<h1>이혜민</h1>
+
+		<div id = "pic">
+			<img src="img/pro.jpg" alt="profile picture">
+		</div>
+
+		<div id = "studying">
+			<h4>Studying</h4>
+			<hr>
+			<ul>
+				<li>Java</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>Oracle sql</li>
+			</ul>
+		</div>
+			<h4>좋아하는 글귀</h4>
+			<hr>
+			<p>나무에 앉은 새는 가지가 부러질까 두려워하지 않는다. <br> 새는 나무가 아니라 자신의 날개를 믿기 때문이다.</p>
+	</div>
 </body>
 </html>

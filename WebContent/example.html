@@ -1,96 +1,143 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-   <head>
-       <meta charset="utf-8">
-       <title></title>
-	   <link rel="stylesheet" href="css/style.css">
-	   <style>
-		body {
-			background: url('img/bg.png'), repeat;
-			background-attachment: fixed;
-		}
-	</style>
-   </head>
-   <body>
-	   
-	<div id = "menubox">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="profile.html">Profile</a></li>
-			<li><a href="example.html">Example</a></li>
-			<li><a href="form.html">Form</a></li>
-		</ul>
-	</div>
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+    	body {
+    		background: url('img/bg.png'), repeat;
+    		background-attachment: fixed;
+    	}
+        h1 {
+            margin-bottom: 100px;
+            text-align: center;
+        }
+        #top {
+            width: 100%;
+            height: 1px;
+        }
+        .go-top {
+            background-color: #E2E9F0;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px 0 10px 0;
+        }
+        hr { margin: 100px 0 100px 0;}
+        #left-menu {
+            background-color: #9F9FBD;
+            width: 10%;
+            min-width: 150px;
+            height: 100%;
+            padding: 20px 20px 24px 20px;
+            position: fixed;
+            text-align: center;
+            top: 75px;
+            left: 0px;
+        }
+        #left-menu ul {
+            padding: 0px;
+            height: 100px;
+            display: block;
+        }
 
-	
-	<form>
-		<fieldset>
-		<legend><h1>Daily study</h1></legend>
-		   	<ul>
-		   		<li><a href="#day01">Day 01</a></li>
-		   		<li><a href="#day02">Day 02</a></li>
-		   		<li><a href="#day03">Day 03</a></li>
-		   		<li><a href="#day04">Day 04</a></li>
-		   		<li><a href="#day05">Day 05</a></li>
-		   		<li><a href="#day06">Day 06</a></li>
-		   		<li><a href="#day07">Day 07</a></li>
-		   		<li><a href="#day08">Day 08</a></li>
-		   		<li><a href="#day09">Day 09</a></li>
-		   		<li><a href="#day10">Day 10</a></li>
-		   		<li><a href="#day11">Day 11</a></li>	
-		   		<li><a href="#day12">Day 12</a></li>	
-		   		<li><a href="#day13">Day 13</a></li>	
-		   	</ul>
-	   	</fieldset>
-   	</form>
+        #left-menu ul li {
+            display: block;
+            margin: 20px 0 20px 0;
+        }
 
-       <br><br><br><br><br>
-       <hr>
+        #left-menu a {
+            font-family: 'Lato', sans-serif;
+            color: #f6f6f6;
+            text-shadow: -1px 0 #4C4A8A, 0 1px #4C4A8A, 1px 0 #4C4A8A, 0 -1px #4C4A8A;
+        }
+        .pages {
+            background-color: white;
+            border: 1px solid #E2E9F0;
+            padding: 80px 120px 80px 120px;
+            box-shadow: 5px 5px 1px 0 #d7d7d7;
+            margin-bottom: 300px;
+        }
+    </style>
+</head>
+<body>
 
-       <h2 id="day01">Day 01 - html의 기초와 태그</h2>
-	       <ul>
-	       		<li>html의 구조 : html, head, body로 이루어짐</li>
-	       		<li>h1~h6 : 제목 만들기</li>
-	       		<li>p : 단락 만들기</li>
-	       		<li>br : 줄 바꾸기</li>
-	       		<li>hr : 수평줄 만들기</li>
-	       		<li>blockquote : 단락 만들기</li>
-			    <li>table : table, tr, td, th를 이용한 표 만들기<br>
-	       		        - colspan, rowspan : 행 또는 열 합치기<br>
-	       		        - caption : 표에 제목 붙이기</li>
-	       		<li>img : 이미지 삽입하기<br>
-	       				- alt : 이미지 설명하기<br>
-	       				- width, height : 이미지 크기 조정하기 </li>
-	       </ul>
-	   <p>
-       		<a href="#top_menu">메뉴로</a>
-       </p>
+    <div id = "nav">
+    	<ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="example.html">EXAMPLE</a></li>
+            <li><a href="form.html">FORM</a></li>
+    	</ul>
+    </div>
 
-       <br><br><br><br><br>
-       <hr>
+    <div id = "left-menu">
+        <ul>
+            <li><a href="#day01">Day 01</a></li>
+            <li><a href="#day02">Day 02</a></li>
+            <li><a href="#day03">Day 03</a></li>
+            <li><a href="#day04">Day 04</a></li>
+            <li><a href="#day05">Day 05</a></li>
+            <li><a href="#day06">Day 06</a></li>
+            <li><a href="#day07">Day 07</a></li>
+            <li><a href="#day08">Day 08</a></li>
+            <li><a href="#day09">Day 09</a></li>
+            <li><a href="#day10">Day 10</a></li>
+            <li><a href="#day11">Day 11</a></li>
+            <li><a href="#day12">Day 12</a></li>
+            <li><a href="#day13">Day 13</a></li>
+        </ul>
+    </div>
 
-       <h2 id="day02">Day 02 - 링크와 폼</h2>
-	       <ul>
-	       		<li>a : 링크 만들기<br>
-	       			- 앵커 : 한 페이지 안에서 작동하는 링크</li>
-	       		<li>map : 이미지 일부분에 링크 걸기</li>
-	       		<li>form(★)  : 폼 만들기<br>
-	       			- fieldset : 폼 요소들을 그룹으로 묶기<br>
-	       			- legend : 그룹에 제목 붙이기<br>
-	       			- input : 사용자 입력 받기</li>
-	       </ul>
-	   <p>
-       		<a href="#top_menu">메뉴로</a>
-       </p>
+    <div id = "top">
+    </div>
 
-       <br><br><br><br><br>
-      <hr>
+    <div id = "full">
+        <h1>Daily-study</h1>
+        <div class = "pages" id="day01">
+            <h2>Day 01 - html의 기초와 태그</h2>
+                <ul>
+            		<li>html의 구조 : html, head, body로 이루어짐</li>
+            		<li>h1~h6 : 제목 만들기</li>
+            		<li>p : 단락 만들기</li>
+            		<li>br : 줄 바꾸기</li>
+            		<li>hr : 수평줄 만들기</li>
+            		<li>blockquote : 단락 만들기</li>
+                    <li>table : table, tr, td, th를 이용한 표 만들기<br>
+        		        - colspan, rowspan : 행 또는 열 합치기<br>
+        		        - caption : 표에 제목 붙이기</li>
+            		<li>img : 이미지 삽입하기<br>
+        				- alt : 이미지 설명하기<br>
+        				- width, height : 이미지 크기 조정하기 </li>
+                </ul>
+            <p>
+                <a class="go-top" href="#top">Top</a>
+            </p>
+        </div>
 
-       <h2 id="day03">Day 03</h2>
-       <p>셋째날 배운 것</p>
-	   <p>
-       		<a href="#top_menu">메뉴로</a>
-       </p>
+        <div class = "pages" id="day02">
+            <h2>Day 02 - 링크와 폼</h2>
+                <ul>
+                    <li>a : 링크 만들기<br>
+                    	- 앵커 : 한 페이지 안에서 작동하는 링크</li>
+                    <li>map : 이미지 일부분에 링크 걸기</li>
+                    <li>form  : 폼 만들기<br>
+                    	- fieldset : 폼 요소들을 그룹으로 묶기<br>
+                    	- legend : 그룹에 제목 붙이기<br>
+                    	- input : 사용자 입력 받기</li>
+                </ul>
+            <p>
+                <a class="go-top" href="#top">Top</a>
+            </p>
+        </div>
 
-   </body>
+        <div class = "pages" id="day03">
+            <h2>Day 03</h2>
+            <p>셋째날 배운 것</p>
+            <p>
+                <a class="go-top" href="#top">Top</a>
+            </p>
+        </div>
+    </div>
+</body>
 </html>
