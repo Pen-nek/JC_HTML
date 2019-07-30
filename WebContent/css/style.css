@@ -33,21 +33,26 @@ p { margin: 20px 0 20px 0;}
 
 h1 { font-size: 25px; }
 
-a { text-decoration: none; }
-a:visited { color: black; }
-a:hover { color: #9F9FBD; }
-a:active { color: white; }
+a {
+    text-decoration: none;
+    color: #4C4A8A;
+}
+a:hover { color: #BDA99F; }
+a:active { color: #f2f2f2; }
 
-/*플로팅메뉴 만들기 : https://cocosoft.kr/149*/
+
+/*  navigation
+플로팅메뉴 만들기 : https://cocosoft.kr/149*/
 #nav {
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
     min-width: 638px;
     height: 30px;
-    padding: 20px 20px 24px 20px;
+    padding: 20px 0px 20px 0px;
     border-bottom: 1px solid #9F9FBD;
-    position: fixed;
     text-align: center;
+    vertical-align: middle;
+    position: fixed;
     top: 0px;
 }
 
@@ -62,7 +67,8 @@ a:active { color: white; }
 }
 
 #nav a:active {
-    color: #F2CCA7;
+    color: #9F9FBD;
+    text-shadow: none;
 }
 
 #nav ul {
@@ -77,6 +83,35 @@ a:active { color: white; }
 #full {
     margin: 200px 300px 300px 300px;
 }
+
+/*  left-menu  */
+#left-menu {
+    background-color: #9F9FBD;
+    width: 10%;
+    min-width: 100px;
+    height: 100%;
+    padding: 20px 20px 24px 20px;
+    position: fixed;
+    text-align: center;
+    top: 70px;
+    left: 0px;
+}
+#left-menu ul {
+    padding: 0px;
+    height: 100px;
+    display: block;
+}
+#left-menu ul li {
+    display: block;
+    margin: 20px 0 20px 0;
+}
+#left-menu a {
+    font-family: 'Lato', sans-serif;
+    color: #f6f6f6;
+    text-shadow: -1px 0 #4C4A8A, 0 1px #4C4A8A, 1px 0 #4C4A8A, 0 -1px #4C4A8A;
+}
+#left-menu a:hover { color: #BDA99F; }
+#left-menu a:active { color: #9F9FBD; }
 
 form {
     margin: 60px 0px 60px 0px;

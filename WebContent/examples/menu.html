@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+
+    <style>
+    /*
+    사용할 색
+    #2D5B54 : 진초
+    #40826D : 비리디안
+    #77978D : 녹회
+    #A3CFC1 : 연두
+    #DFFFFA : 밝은연두
+    */
+        body {
+            margin: 0;
+            background-image: url("img/green2.jpg");
+            background-attachment: fixed;
+        }
+        #header {
+            width : 100%;
+            height : 50px;
+            position : fixed;
+            top : 0;
+            left : 0;
+            z-index: 10;
+            background-color: #40826D;
+
+        }
+        #con {
+            
+        }
+        #con1 {
+            float: left;
+            position: fixed;
+            top : 50px;
+            left : 0;
+            width : 200px;
+            height : 100%;
+            background-color: rgba(45, 91, 84, 0.5);
+            z-index: 2;
+        }
+        #con2 {
+            float: left;
+            position: relative;
+            top : 50px;
+            left : 200px;
+            width : ;
+            height : 100%;
+            z-index: 1;
+            white-space: pre-line;
+        }
+        #footer {
+            width : 100%;
+            height : 50px;
+            position : fixed;
+            bottom : 0;
+            left : 0;
+            background-color: #2D5B54;
+            z-index: 10;
+        }
+
+        #banner {
+            position : fixed;
+            top : 5px;
+            right : 5px;
+            width : 38px;
+            height : 38px;
+            background-color: #DFFFFA;
+            z-index: 20;
+        }
+        img {
+            width : 100%;
+            position : fixed;
+            float: left;
+            top : 50px;
+            left : 0;
+            z-index: 0;
+        }
+    </style>
+
+    <body>
+        <div id = "header">
+            header
+        </div>
+        <div id = "con">
+            Photo by Annie Spratt on Unsplash
+            <div id = "con1">con1</div>
+            <div id = "con2">con2
+            </div>
+        </div>
+        <div id = "footer">
+            footer
+        </div>
+        <div id = "banner">
+            ban
+        </div>
+    </body>
+</html>
