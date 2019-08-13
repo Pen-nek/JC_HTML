@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html과 JS 기능 합체 -->
+
+    아이디 : <input type=text id="userid">
+    비밀번호 : <input type=text id="userpw">
+
+    <button onclick="login()">로그인</button>   <!--버튼 태그가 있다!-->
+
+    <script>
+        function login() {
+            var s_id = "root";
+            var s_pw = 1234;
+            var id = document.querySelector("#userid").value;
+            var pw = document.querySelector("#userpw").value;
+
+            if (id == s_id && pw == s_pw)
+                alert("로그인 성공!");
+            else
+                alert("로그인 실패");
+        }
+    </script>
+</body>
+</html>

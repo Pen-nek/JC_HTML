@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* while문 : 1부터 10까지 합 구하기
+    
+        var x = 1;      // x값 초기화
+        var sum = 0;    // 누적 합
+        
+        while(x<=10) {
+            sum += x;
+            x++;
+        }
+        
+        document.write("누적 합은 " + sum + "입니다.");
+    */
+    
+    /* Do-while문 : 1부터 10까지 출력 후 누적합 구하기 */
+    
+        var x = 1;      // x값 초기화
+        var sum = 0;    // 누적 합
+        
+        do {
+            document.write(x + "<br>");
+            sum += x;
+            x++;
+        }while(x<=10)
+        
+        document.write("누적 합은 " + sum + "입니다.");
+    </script>
+</body>
+</html>

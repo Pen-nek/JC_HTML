@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 생성 방법 1
+        var tv = new Object();
+        tv.color = "white";
+        tv.price = 300000;
+        tv.info = function() {
+            document.write("TV 색상 : " + tv.color + "<br>");
+            document.write("TV 가격 : " + tv.price + "<br>");
+        }
+        tv.info();
+
+        // 객체 생성 방법 2
+        var car = {
+            color : "deep blue",
+            price : 30000000,
+            info : function() {
+                document.write("차 색상 : " + this.color + "<br>");
+                document.write("차 가격 : " + this.price + "<br>");
+            }
+        };
+        car.info();
+    </script>
+</body>
+</html>

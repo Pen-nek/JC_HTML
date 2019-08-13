@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 로또 번호 6개 얻기
+        // var lotto_num = new Array();
+        // var max_length = 6;
+        // for(var i=0; i<max_length; i++) 
+        //     lotto_num[i] = Math.round((Math.random() * 44 + 1), 0);
+
+        // for(var i in lotto_num) // lotto_num 배열의 값을 인덱스 0번부터 끝까지 불러오며 반복. 위의 for문과 같은 조건
+        //     document.write(lotto_num[i] + "<br>");
+
+        var lotto_num = new Array();
+        var max_length = 6;
+        for(var i=0; i<max_length; i++) {
+            lotto_num[i] = Math.round((Math.random() * 44 + 1), 0);
+            
+            for(var j=0; j<i; j++) {
+                if(lotto_num[j] == lotto_num[i]) {
+                    i--;
+                }
+            }
+        }
+        for(var i in lotto_num) // lotto_num 배열의 값을 인덱스 0번부터 끝까지 불러오며 반복. 위의 for문과 같은 조건
+            document.write(lotto_num[i] + "<br>");
+    </script>
+</body>
+</html>

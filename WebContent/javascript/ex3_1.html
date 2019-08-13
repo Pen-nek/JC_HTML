@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3장. 맛보기 실습 예제</title>
+</head>
+<body>
+    <script>
+        var s_id = "root";
+        var s_pw = 1234;
+        
+        var id = prompt("당신의 아이디는?", "");
+        var pw = prompt("당신의 패스워드는?", "0");
+
+        if (id == s_id) {
+            if (pw == s_pw)
+                document.write(id + "님 로그인되었습니다.");
+                else {
+                    alert("잘못된 패스워드입니다. 다시 입력해주세요.")
+                    location.reload();      // 브라우저 새로고침!!
+                }
+        } else {
+            alert("아이디가 존재하지 않습니다. 다시 입력해주세요.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //CheckWeight 객체 생성자 함수 생성
+        function CheckWeight(name, height, weight) {
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+
+            //getInfo 함수 생성
+                // String 한 줄(이름, 키, 몸무게)을 반환
+            this.getInfo = function() {
+                var str = ""
+                str += "이름: " + this.userName + ", ";
+                str += "키: " + this.userHeight + ", ";
+                str += "몸무게: " + this.userWeight + "<br>";
+                return str;
+            }
+            
+            //getResult 함수 생성
+                // 정상몸무게를 계산한 후 String 한 줄(정상/미달/초과 여부)을 반환
+            this.getResult = function() {
+                this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+                this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+                if (this.userWeight >= this.minWeight && this. userWeight <= this.maxWeight) {
+                    return "정상 몸무게입니다";
+                } else if (this.userWeight < this.minWeight) {
+                    return "정상 몸무게에 미달입니다";
+                } else {
+                    return "정상 몸무게를 초과합니다.";
+                }
+            }
+        }
+        
+        var jang = new CheckWeight("장보리", 168, 70);
+        var park = new CheckWeight("박달재", 170, 60);
+        console.log(jang);
+        console.log(park);
+
+        document.write(jang.getInfo());
+        document.write(jang.getResult);
+
+        document.write(park.getInfo());
+        document.write(park.getResult);
+        
+    </script>
+</body>
+</html>

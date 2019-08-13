@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //파싱하기 : 문자 자르기
+
+        // substring 이용
+        // var tel = prompt("전화번호를 입력해주세요. (ex. 000-0000-0000)", "");
+
+        // tel1 = tel.substring(0, 3);
+        // tel2 = tel.substring(4, 8);
+        // tel3 = tel.substring(9, 12);
+
+        // document.write("국번 : " + tel1 + "<br>");
+        // document.write("중간자리 : " + tel2 + "<br>");
+        // document.write("마지막자리 : " + tel3 + "<br>");
+
+
+
+        // split 이용
+        var arr = tel.split("-");
+        for(var i in arr)
+            document.write(arr[i] + "<br>");
+
+    </script>
+</body>
+</html>

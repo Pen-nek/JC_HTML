@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var site = prompt("당신이 가고 싶은 사이트 입력 (구글, 다음, 네이버) : ", "");
+        var url = null;
+
+        switch(site) {
+            case "구글" :
+                url = "http://www.google.com";
+                break;
+            case "다음" :
+                url = "http://www.daum.net";
+                break;
+            case "네이버" :
+                url = "http://www.naver.com";
+                break;
+            default :
+                alert("보기에 없는 사이트입니다. 다시 입력해주세요.")
+                location.reload();
+                break;
+        }
+
+        if(url) location.href = url;     // url에 저장된 주소로 이동
+    </script>
+</body>
+</html>

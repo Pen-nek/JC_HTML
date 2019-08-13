@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var nowMonth = today.getMonth(),    // 현재 월은 -1한 값이 뜸. 때문에 사용 시에 +1 해줘야 함
+        nowDate = today.getDate(),
+        nowDay = today.getDay();
+
+        document.write("<h1> 오늘 날짜 정보 </h1>");
+        document.write("현재 월 : " + nowMonth, "<br>");
+        document.write("현재 일 : " + nowDate, "<br>");
+        document.write("현재 요일 : " + nowDay, "<br>");   // 요일은 숫자로 표시됨. 0이 일요일
+        document.write("현재 GMT : " + today.toGMTString(), "<br>");
+        document.write("현재 로케일스트링 : " + today.toLocaleString(), "<br>");
+
+        var worldcup = new Date(2002, 4, 31);
+        document.write("<h1> 월드컵 날짜 정보 </h1>");
+        document.write("현재 월 : " + worldcup.getMonth(), "<br>");
+        document.write("현재 일 : " + worldcup.getDate(), "<br>");      // 정확히 지정해 넣은 값은 있는 그대로 뜸. 사용 시에 +1 안 해줘도 됨
+        document.write("현재 요일 : " + worldcup.getDay(), "<br>");   // 요일은 숫자로 표시됨. 0이 일요일
+        
+
+    </script>
+</body>
+</html>

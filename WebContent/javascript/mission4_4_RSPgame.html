@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 컴퓨터와 가위바위보 하는 게임
+        // 승패 판단에 필요한 변수 선언
+        var flag = false;
+
+        // 가위바위보 7회
+        for (i=0; i<7; i++) {
+            // 필요한 변수 선언
+            var game;
+            var gameNum;
+
+            // 현재 몇 회차인지 출력
+            document.write("<br> 가위바위보 " + i + "회차 <br>");
+
+            // 유저에게 가위바위보를 입력해달라는 창 생성
+            game = prompt("가위 바위 보 중에 선택해주세요.", "");
+            
+            // 유저에게서 입력받은 값을 저장 (잘못 입력 시 오류메시지 출력 및 새로고침)
+            switch(game) {
+                case "가위" :
+                    gameNum = 1; break;
+                case "바위" :
+                    gameNum = 2; break;
+                case "보" :
+                    gameNum = 3; break;
+                default :
+                    alert("입력오류!");
+                    location.reload();
+            }
+
+            // 유저가 낸 값을 이미지로 표시
+            document.write("유저 : ");
+            document.write("<img src=\"images/math_img_" + gameNum + ".jpg\">");
+
+            // 컴퓨터가 낼 가위바위보 생성
+            var com = Math.ceil(Math.random() * 3);
+
+            // 컴퓨터가 낸 가위바위보 이미지로 표시
+            document.write("컴퓨터 : ");
+            document.write("<img src=\"images/math_img_" + com + ".jpg\">");
+
+            // 승패 비교 : 유저 값과 컴퓨터 값 비교
+            var result = gameNum - com;
+
+            // 승리 시 반복문 빠져나감
+            if(result == -2 || result == 1) {
+                flag = true;
+                break;
+            // 패배 시 패배 이미지 출력하고 처음부터 반복
+            } else {    
+                document.write("<img src=\"images/game_2.jpg\">");
+                alert("졌습니다. 재도전합니다.");
+            }
+
+            document.write("<br><br><br>")
+            
+        }// end of while
+
+
+        // 반복문 밖으로 탈출 시
+        
+        // 승리했을 경우 승리 이미지 출력
+        if(flag == true) {
+            document.write("<img src=\"images/game_1.jpg\">");
+            alert("승리했습니다!");
+        // 7회 패배인 경우 게임종료 메시지 출력
+        } else
+            document.write("<p> 시도가능한 게임횟수를 모두 사용했습니다. </p>");
+            
+    
+    </script>
+</body>
+</html>
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (i=0; i<7; i++) {
+            if(win) {
+                alert("축하합니다! 이겼습니다!");
+                break;
+            } else {
+                alers("졌습니다. 재도전합니다.");
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
+
+-->

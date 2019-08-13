@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var height = prompt("당신의 신장은?", "0");
+        var weight = prompt("당신의 체중은?", "0");
+        var normal = (height - 100) * 0.9;
+        var diff = weight - normal;
+
+        var result = (diff <= 5) && (diff >= -5);
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+        document.write("당신의 체중은 " + weight + "kg, ");
+        document.write("적정체중은 " + normal + "kg 에서 오차범위 +5 ~ -5 사이입니다." + "<br>");
+        document.write("당신은 " + result + "<br>");
+
+        /*
+        document.write("현재 체중은 " + normal + "kg 이며 ");
+
+        if (diff == 0)
+            document.write("완전 적정체중입니다." + "<br>");
+        else if (diff > 0)
+            document.write("적정체중에서 " + diff + "kg만큼 초과했습니다.")
+        else if (diff < 0)
+            document.write("적정체중에서 " + diff + "kg만큼 미달입니다.")
+        */
+
+    </script>
+</body>
+</html>

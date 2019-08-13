@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var count = 0;  // 전역변수
+
+        // 1. 일반 호출 방식
+        // 호이스팅(호출문이 먼저 나와도 함수 정의문을 아래에서부터 불러와서 호출이 가능) OK
+        myFnc1();
+
+        function myFnc1(){
+            count++;
+            document.write("hello" + count, "<br>");
+        }
+
+        myFnc1();
+
+        // 2. 익명 호출 방식
+        // 호이스팅 X
+        
+        var MyFnc2 = function(){
+            count++;
+            document.write("hello" + count, "<br>");
+        };
+        MyFnc2();
+
+    </script>
+</body>
+</html>

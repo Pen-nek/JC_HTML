@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 컴퓨터가 낼 가위/바위/보 맞추는 게임
+
+        var game = prompt("가위 바위 보 중에 선택해주세요.", "");
+        var gameNum;
+
+        switch(game) {
+            case "가위" :
+                gameNum = 1; break;
+            case "바위" :
+                gameNum = 2; break;
+            case "보" :
+                gameNum = 3; break;
+            default :
+                alert("입력오류!");
+                location.reload();      // 브라우저 새로고침!!
+        }
+
+        var com = Math.ceil(Math.random() * 3);
+
+        document.write("<img src=\"images/math_img_" + com + ".jpg\">");
+
+        // 가위바위보 승패 이미지 출력
+        if(gameNum == com)
+            document.write("<img src=\"images/game_1.jpg\">");
+        else
+            document.write("<img src=\"images/game_2.jpg\">");
+    
+    </script>
+</body>
+</html>

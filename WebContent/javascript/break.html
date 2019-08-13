@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 숫자 1~100 중에 5의 배수만 제외하고 더한 값을 표시
+
+        // var x = 1;      // x값 초기화
+        // var sum = 0;
+
+        // while(x<=100) {
+        //     if(x % 5 == 0) {
+        //         x++;
+        //         continue;
+        //     }
+        //     document.write(x + "<br>");
+        //     sum += x;
+        //     x++;
+        // }
+        // document.write("누적합은 " + sum + "입니다.");
+
+        for (var x=1; x<=100; x++) {
+            if(x % 5 == 0) continue;
+            sum += x;
+        }
+        document.write("누적합은 " + sum + "입니다.");
+
+        // flag를 사용해 무한 루프 중 특정 조건을 만나면 멈추게 하기
+        var flag = false;
+        while(true){
+            if(flag == true) break;
+        }
+
+        // for문 무한루프
+        for(;;) {
+            
+        }
+    </script>
+</body>
+</html>

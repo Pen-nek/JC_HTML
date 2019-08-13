@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이메일 주소 체크
+        var userEmail = prompt("당신의 이메일 주소는?", "");
+        var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+        // 플래그 놓기
+        var check1 = false;
+        var check2 = false;
+
+        // @의 존재 체크
+        if (userEmail.indexOf("@") > 0) { check1 = true; }
+        
+        // 유효한 Url이 붙었는지 체크
+        for (var i=0; i < arrUrl.length; i++) {
+            if (userEmail.indexOf(arrUrl[i]) > 0) {
+                check2 = true;
+            }
+        }
+
+        // 플래그 두 개 다 true라면
+        // 유저 이메일 화면에 찍기
+        if (check1 && check2) {
+            document.write(userEmail);
+        // "플래그 두 개 다 true"가 아니라면
+        // 오류 창 띄우기
+        } else {
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 재귀 함수
+
+        // 1.팩토리얼 구하는 알고리즘
+        function factorial(n) {
+            if(n>1)
+                return n * factorial(n-1);
+            else return 1;
+        }
+        
+        // 2. power : x의 y제곱을 구하는 알고리즘
+        function power(x, y) {
+            if(y>=1) 
+                return x * power(x, y-1);
+            else return 1;
+        }
+
+        document.write(factorial(5), "<br>");
+        document.write(power(2,10));
+
+    </script>
+</body>
+</html>
