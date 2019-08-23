@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+
+<script src="../js/jquery.js"></script>
+
+<script>
+    $(function () {
+        $.ajax({
+            url:"../data/MOCK_DATA.json",
+            dataType:"json",
+
+            // data를 받는 데 성공하면
+            success: function(data){
+                if(data.length > 0) {
+                    var tb = $("<table />");
+                    for(var i in data){
+                        var $id = data[i].id;
+                        var $first_name = data[i].first_name;
+                        var $last_name = data[i].last_name;
+                        var $email = data[i].email;
+                        var $ip_address = data[i].ip_address;
+
+                        var row = $("<tr/>").append(
+                            $("<td />").text($id),
+                            $("<td />").text($first_name),
+                            $("<td />").text($last_name),
+                            $("<td />").text($email),
+                            $("<td />").text($ip_address)
+                        );
+
+                        tb.append(row);
+                    }
+                    $(".wrap").append(tb);
+                }
+            }
+        });
+    });
+</script>
+
+</head>
+<body>
+   <div class="wrap"></div>
+</body>
+</html>

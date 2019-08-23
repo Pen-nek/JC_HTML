@@ -1,0 +1,28 @@
+<!-- jQuery 적용하는 방법 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 연동</title>
+
+    <!--방법1 : 파일을 다운로드 받아 폴더에 넣어두고 적용-->
+    <script src="../js/jquery.js"></script>
+    
+    <!--방법2 : 인터넷 링크를 걸어 네트워크로 전송받음
+        (단점:네트워크 연결 없으면 적용 안 됨)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>-->
+    <script>
+        $(function(){
+            $("*").css("color", "blue");   // *(유니버셜) 선택자 : 전체선택
+            $("#title2").css("background-color", "gray").css("border", "solid 1px black"); // jQuery의 체이닝 기법. css를 체인이 연결되듯 연결해주는 것
+        });
+    </script>
+</head>
+<body>
+    <h1 id = "title1">제목1 표시부</h1>
+    <h2 id = "title2">제목2 표시부</h2>
+</body>
+</html>

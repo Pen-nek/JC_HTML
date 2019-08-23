@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<style>
+   body{font: 14px Malgun Gothic, "맑은고딕",sans-serif;}
+   .zoomBtnZone{font-size: 14px;}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+    $(function(){  
+        // 초기에는 btn2를 숨기기
+        $(".btn2").hide();
+        
+        $(".btn1").on("click", function () {
+            $(".box").slideUp(1000, "swing",
+            function() {
+                $(".btn1").hide();
+                $(".btn2").show();
+            });
+        });
+
+    });
+</script>
+</head>
+<body>
+    <p>
+        <button class = "btn1">slideUp</button>
+        <button class = "btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class ="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class = "btn4">fadeTo(0.3)</button>
+        <button class = "btn4">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur delectus totam est accusantium eligendi aliquid facilis nostrum porro assumenda voluptas vitae sapiente, ab quasi alias, quis architecto optio id cupiditate!
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function() {
+            var result1 = $("#user_name").val();
+            console.log(result1);
+            
+            $("#user_id").val("javascript");
+
+            var result2 = $("#user_id").prop("defaultValue");
+            console.log(result2);
+        });
+    </script>
+</head>
+<body>
+    <h1>
+        <strong>폼 관련 객체조작 및 생성</strong>
+    </h1>
+    <form action="#" id = "form_1">    <!-- 예전 폼 태그에는 name 속성을 주었으나, 요즘은 id 속성을 많이 씀 -->
+        <p>
+            <label for = "user_name">이름</label>
+            <input type = "text" name = "user_name" id = "user_name" value = "이혜민">
+            <label for = "user_id">아이디</label>
+            <input type = "text" name = "user_id" id = "user_id" value = "sky1">
+        </p>
+        
+    </form>
+</body>
+</html>

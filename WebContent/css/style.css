@@ -62,13 +62,15 @@ a:active { color: #f2f2f2; }
 }
 
 #nav a:hover {
-    color: #ffffff;
-    text-shadow: -1px 0 #4C4A8A, 0 1px #4C4A8A, 1px 0 #4C4A8A, 0 -1px #4C4A8A;
+    color: #9F9FBD;
+    text-shadow: none;
+    transition: 0.3s;
 }
 
 #nav a:active {
-    color: #9F9FBD;
-    text-shadow: none;
+    color: #ffffff;
+    text-shadow: -1px 0 #4C4A8A, 0 1px #4C4A8A, 1px 0 #4C4A8A, 0 -1px #4C4A8A;
+    transition: 0;
 }
 
 #nav ul {
@@ -110,7 +112,10 @@ a:active { color: #f2f2f2; }
     color: #f6f6f6;
     text-shadow: -1px 0 #4C4A8A, 0 1px #4C4A8A, 1px 0 #4C4A8A, 0 -1px #4C4A8A;
 }
-#left-menu a:hover { color: #BDA99F; }
+#left-menu a:hover { 
+    color: #9F9FBD;
+    transition: 0.3s;
+}
 #left-menu a:active { color: #9F9FBD; }
 
 form {

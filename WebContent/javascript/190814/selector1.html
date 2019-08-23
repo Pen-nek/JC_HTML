@@ -1,0 +1,28 @@
+<!-- jQuery CSS 종속 선택자 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 연동</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function(){
+            // 종속 선택자 : h1 중에서도 id가 title4인 요소에만 적용
+            $("h1#title4").css("color", "blue").css("border", "1px solid black");
+            // 종속 선택자 : h2 중에서도 클래스가 title3인 요소에만 css 적용
+            $("h2#title3").css("color", "red").css("border", "1px dashed #ff2437");
+            // 그룹 선택 : 쉼표(,)로 다중 선택 가능
+            $("h1.title4, h2#title3").css("background-color", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <h1 class = "title1">제목1 표시부</h1>
+    <h2 id = "title2">제목2 표시부</h2>
+    <h2 id = "title3">제목3 표시부</h2>
+    <h1 id = "title4">제목4 표시부</h1>
+</body>
+</html>

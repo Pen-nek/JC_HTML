@@ -1,0 +1,49 @@
+<!-- 위치 탐색 선택자 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 연동</title>
+    <script src="../js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script>
+        $(function(){
+            var obj = [
+                {"area" : "서울"},
+                {"area" : "부산"},
+                {"area" : "전주"}
+            ];  // 키, 밸류 쌍으로 넣기            
+            
+            $(obj).each(function(i, o){
+                console.log(i + " : ", o);
+            });
+            console.log("=============== THE END1 ");
+
+            $.each($("#menu2 li"), function(i, o) {
+                console.log(i + " : ", o);
+            });
+            console.log("=============== THE END2 ");
+
+            $.each($("#menu2 li"), function(i) {
+                console.log(i + " : ", $(this));
+            });
+            console.log("=============== THE END3 ");
+        });
+    </script>
+</head>
+<body>
+    <ul id = "menu">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+    </ul>
+    <ul id = "menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 위치 탐색 선택자 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 연동</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function(){
+            
+            // 특정요소 중 순서가 첫번째, 마지막인 요소 선택
+            $("#menu li:first").css("color", "blue").css("border", "1px solid black");
+            $("#menu li:last").css("color", "red").css("border", "1px solid black");
+
+            // 특정요소 중 홀수/짝수번째 요소들 선택
+            $("#menu li:odd").css("background-color", "lightblue");
+            $("#menu li:even").css("background-color", "yellow");
+
+            // 특정요소 중 3번째 요소만 선택
+            $("#menu li:nth-child(3)").css("font-weight", "bold");
+
+            // 특정 요소 중 인덱스 2부터 참조하는 요소들 선택
+            $("#menu li").slice(2).css("text-decoration", "underline");
+            
+        });
+    </script>
+</head>
+<body>
+    <div id = "menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<style>
+   body{font: 14px Malgun Gothic, "맑은고딕",sans-serif;}
+   .zoomBtnZone{font-size: 14px;}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){   // 기본 폰트 사이즈는 14부터 시작
+   var baseFontSize = 14;
+   
+   //줌버튼존 클래스의 버튼들 중 하나가 눌렸을 때 zoomInOut 메소드 실행
+   $(".zoomBtnZone button").on("click", zoomInOut);
+   
+   //zoomInOut 메소드 정의
+   function zoomInOut( ) {
+
+		// -(줌아웃) 버튼이 눌렸을 때
+      if($(this).hasClass("zoomOutBtn")){
+		// 폰트가 8보다 클 때만 폰트사이즈 줄임
+         if(baseFontSize<=8) return false;
+         baseFontSize--;
+
+		// +(줌인) 버튼이 눌렸을 때
+      } else if($(this).hasClass("zoomInBtn")){
+		// 폰트가 20보다 작을 때만 폰트사이즈 키움
+         if(baseFontSize>=20) return false;
+         baseFontSize++;
+
+		 // 100% 버튼이 눌렸을 때 폰트사이즈 14로 복구
+      } else {
+         baseFontSize = 14;
+      }
+
+	  // 14px 라고 쓰여진 부분의 숫자 변경
+      $(".fontSize").text(baseFontSize + "px");
+
+	  // css를 활용해서 실제 글자사이즈 변경
+      $("body").css({fontSize:baseFontSize + "px"});
+   }
+});
+</script>
+</head>
+<body>
+   <p class="zoomBtnZone">
+      <button class="zoomOutBtn">-</button>
+      <button class="originBtn">100%</button>
+      <button class="zoomInBtn">+</button>
+   </p>
+   <p class="fontSize">14px</p>
+   <div id="wrap">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consectetur nibh, ut luctus urna placerat non. Phasellus consectetur nunc nec mi feugiat egestas. Pellentesque et consectetur mauris, sed rutrum est. Etiam odio nunc, ornare quis urna sed, fermentum fermentum augue. Nam imperdiet vestibulum ipsum quis feugiat. Nunc non pellentesque diam, nec tempor nibh. Ut consequat sem sit amet ullamcorper sodales.
+   </div>
+</body>
+</html>
